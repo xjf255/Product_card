@@ -1,0 +1,131 @@
+:root{
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+* h1{
+    font-family: 'Fraunces', serif;
+}
+p{
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+}
+body{
+    max-width: 100vw;
+    min-height: 90vh;
+    background-color: var(--Cream);
+}
+main{
+    max-width: 100vw;
+    margin: 40px 20px;
+    background-color: var(--White);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.img__mobile{
+    width: 100%;
+    aspect-ratio: 343/240;
+}
+.img__desktop{
+    display: none;
+}
+.information{
+    margin: 30px;
+}
+.category{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.information__title{
+    font-size: 2rem;
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+}
+.information__paragraph{
+    margin-top: 30px;
+    line-height: 24px;
+    font-weight: 500;
+}
+.price{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.price__ofert{
+    color: var(--Dark_cyan);
+    font-size: 2rem;
+    margin-right: 20px;
+}
+.price__origin{
+    position: relative;
+}
+.price__origin::before{
+    content: "";
+    width: 100%;
+    bottom: 50%;
+    top: 50%;
+    position: absolute;
+    border-bottom: 1px solid var(--Dark-grayish-blue );
+}
+button{
+    width: 100%;
+    color: var(--White);
+    background-color: var(--Dark_cyan);
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    border: none;
+}
+button:hover{
+    background-color: var(--Very-dark-blue);
+}
+@media (width > 768px) {
+    body{
+        min-width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        max-width: 40vw;
+        display: flex;
+        margin: 0;
+    }
+    .img__mobile{
+        display: none;
+    }
+    .img__desktop{
+        width: 50%;
+        display: block;
+        aspect-ratio: 2/3;
+    }
+    .information{
+        width: 50%;
+        padding: 40px;
+        padding-right: 50px;
+        margin: 0;
+    }
+    .information__title{
+        font-size: 2.6rem;
+    }
+    .price{
+        margin-top: 30px;
+    }
+    button{
+        margin-top: 30px;
+    }
+}
